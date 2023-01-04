@@ -1,6 +1,10 @@
 const express = require('express');
 const app = require('./app');
 
-app.listen(9000, () => {
-  console.log('Welcome to  Student App');
+require('dotenv').config;
+
+const port = process.env.PORT || 9000;
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
